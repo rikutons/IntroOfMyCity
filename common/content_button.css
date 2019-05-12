@@ -1,0 +1,38 @@
+.content_btn_wrapper{
+	position:absolute;
+	left:50%;
+	display: flex;
+	transform: translate(-50%, 0%);
+	background-color: rgba(240, 240, 240, 0.3);
+}
+
+.content_btn{
+	position:relative;
+	display: flex;
+	font-weight:bold;
+	font-size:20px;
+	padding:12px 15px;
+	cursor:pointer;
+	color: var(--black-color);
+	text-decoration:none;
+}
+
+.content_btn:hover{
+	color: var(--blue-color);
+}
+.content_btn::after{
+	position:absolute;
+	content:"";
+	width:98%;
+	height:0%;
+	left:-2px;
+	bottom:0px;
+	border:2px solid transparent;
+	border-bottom-color:var(--black-color);
+	transform: scale(0,1);
+	transition: all .3s;
+}
+
+.content_btn:hover::after{
+	transform: scale(1);
+}

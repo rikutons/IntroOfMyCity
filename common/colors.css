@@ -1,0 +1,16 @@
+:root{
+	--art-color   : #d2281e;
+	--nature-color: #14961e;
+	--black-color : #101010;
+	--white-color : #f0f0f0;
+	--blue-color : #330088;
+	--lightblue-color : #8393e8;
+}
+
+.art_color{
+	color: rgb(210, 40, 30);
+}
+
+.nature_color{
+	color: rgb(20, 150, 30);
+}
