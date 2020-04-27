@@ -51,12 +51,12 @@
 .title{
 	font-weight:bold;
 	color: var(--blue-color);
-	font-size:4vw;
+	font-size: 4vw;
 	margin: -15px 3px;
 }
 
 .sub{
 	font-weight:bold;
 	font-size:2vw;
-	line-height:2.5vw;
+	line-height:2.2vw;
 }

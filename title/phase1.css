@@ -19,9 +19,9 @@ body[data-phase1] .phase1__text1::after{
 	top:50%;
 	left:50%;
 	transform: translate(-50%, -50%);
-	content:"‚«‚ç‚ß‚­©‘RA‚±‚±‚ë–ü‚³‚ê‚é‚Ü‚¿B";
+	content:"ãã‚‰ã‚ãè‡ªç„¶ã€ã“ã“ã‚ç™’ã•ã‚Œã‚‹ã¾ã¡ã€‚";
 	font-weight:bold;
-	font-family:"HG³²‘‘Ì-PRO",fantasy;
+	font-family:"HGæ­£æ¥·æ›¸ä½“-PRO",fantasy;
 	font-size:2.8vw;
 }
 
@@ -81,7 +81,7 @@ body[data-phase1] .phase1__text2:before{
 	top:-3vw;
 	left:50%;
 	transform: translateX(-50%);
-	content:"“‡ªŒ§";
+	content:"å³¶æ ¹çœŒ";
 	font-weight:bold;
 	font-size:2vw;
 	color: var(--black-color);
@@ -105,10 +105,10 @@ body[data-phase1] .phase1__text2{
 body[data-phase1] .phase1__text2:after{
 	position:absolute;
 	content:"";
-	left: -4vw;
+	left: -3.99vw;
 	top: 30%;
 	border-top: 2vw solid transparent;
-	border-right: 2vw solid var(--blue-color);
+	border-right: 2vw solid #660088;
 	border-bottom: 2vw solid transparent;
 	border-left: 2vw solid transparent;
 }
