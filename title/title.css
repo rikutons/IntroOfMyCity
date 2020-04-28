@@ -8,26 +8,21 @@ body {
 	height: 100%;
 	margin:0;
 	overflow: hidden;
+	background-color: rgb(75, 40, 8);
 }
 
 #title__background{
-	z-index:-2;
-	overflow: hidden;
-	background-color: rgb(0,163,175);/*半透明カラーの色*/
-}
-#title__background::before{
 	content: '';
 	background: url('../images/grandtoit.jpg');/*背景画像のURL*/
 	background-size: cover;
-	opacity: 0.5;/*半透明カラーの透明度*/
-	filter: blur(8px);/*ぼかし度*/
+	filter: blur(8px); /*ぼかし度*/
 	position: absolute;
-	/* 参考: http://designcolor-web.com/2016/09/14/css-blur-effects-background/*/
+	/* 参考: http://designcolor-web.com/2016/09/14/css-blur-effects-background/ */
 	top: 8px;
 	left: 8px;
 	right: 8px;
 	bottom: 8px;
-	z-index: -3;
+	z-index: -2;
 }
 
 #title__sub{
@@ -47,7 +42,7 @@ body {
 .title__alert{
 	position: absolute;
 	display:block;
-	color:#aa0000;
+	color:#000;
 	font-size: 20px;
 	top: calc(100% - 40px);
 	left: calc(100% - 560px);
