@@ -1,0 +1,135 @@
+@import url("../common/base.css")
+@import url("../common/colors.css")
+@import url("../common/keyframes.css")
+@import ../partials/mixins
+
+body[data-phase1]
+  .phase1
+    &__text1
+      @include center(false, true)
+      width: 100%
+      height: 0%
+      background-color: var(--white-color)
+      overflow: hidden
+      animation: phase1__text1_back_a 1.4s cubic-bezier(0.15, 0.95, 0.23, 0.89) 0s forwards
+      box-shadow: 2px 2px 1px #000
+
+      &::after
+        @include center
+        content: "きらめく自然、こころ癒されるまち。"
+        font-weight: bold
+        font-family: "HG正楷書体-PRO",fantasy
+        font-size: 2.8vw
+
+    &__map
+      @include center(true, false)
+      position: absolute
+      top: -1000%
+      left: 50%
+      width: 1000%
+      transform: translateY(-50%)
+      animation: appear 0s ease 1.5s forwards, phase1__map_a 1s ease 1.5s forwards
+
+    &__backcircle
+      @include center
+      transform: scale(0)
+      width: 150vmax
+      height: 150vmax
+      border-radius: 50%
+      background-color: #7878ff
+      z-index: -1
+      animation: scale0-1_50p 1s ease 1.5s forwards
+
+    &__text2
+      @include center
+      font-size: 6vw
+      padding: 0px 2vw
+      color: var(--white-color)
+      opacity: 0
+      background-color: var(--blue-color)
+      animation: fadein .5s ease 2.5s forwards, phase1_text2_a .5s ease 2.5s forwards
+
+      &:before
+        @include center(true, false)
+        top: -3vw
+        content: "島根県"
+        font-weight: bold
+        font-size: 2vw
+        color: var(--black-color)
+        text-indent: .5vw
+        letter-spacing: .5vw
+
+      &:after
+        position: absolute
+        content: ""
+        left: -3.99vw
+        top: 30%
+        border: 2vw solid transparent
+        border-right: 2vw solid #660088
+
+    $change_colors : (#c3ce5f, #c45c66, #283c5f)
+    @for $i from 1 through 3
+      &__change#{$i}
+        position: absolute
+        top: 0%
+        left: 0%
+        transform: translateY(calc(100% + 25vw))
+        width: 100%
+        height: 100%
+        background-color: nth($change_colors, $i) 
+        $delay : 3.5s + 0.2 * ($i - 1)
+        animation: phase1__change_a 0.7s cubic-bezier(0.97, 0.01, 0, 0.97) $delay forwards
+
+        &:before
+          border-bottom: solid 25vw nth($change_colors, $i)
+          position: absolute
+          content: ""
+          top: -25vw
+          height: 0%
+          width: 0%
+          border-left: solid 50vw transparent
+          border-right: solid 50vw transparent
+
+    &__change3:after
+      @include center
+      content: "Let's enjoy!"
+      font-size: 7vw
+      font-family: 'Comic Sans MS', cursive
+      color: var(--white-color)
+
+@keyframes phase1__text1_back_a
+  0%
+    height: 0%
+
+  40%
+    height: 20%
+
+  60%
+    height: 20%
+
+  100%
+    height: 0%
+
+@keyframes phase1__map_a
+  0%
+    width: 500%
+    transform: translate(-70%, -50%) rotate(30deg)
+
+  50%
+    width: 80%
+    transform: translate(-50%, -50%)
+
+  100%
+    width: 100%
+    transform: translate(-50%, -50%)
+
+@keyframes phase1_text2_a
+  from
+    transform: translate(0%, -50%)
+
+  to
+    transform: translate(-50%, -50%)
+
+@keyframes phase1__change_a
+  to
+    transform: translateY(0px)

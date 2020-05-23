@@ -1,0 +1,126 @@
+@import url("../common/base.css")
+@import url("../common/content_button.css")
+@import url("../common/colors.css")
+@import url("../common/keyframes.css")
+
+body
+  background-color: var(--white-color)
+  color: var(--black-color)
+
+#contents
+  &__header_image
+    position: absolute
+    width: 100%
+    height: 100%
+    background-size: cover
+    z-index: -1
+    animation: fadein 1s linear 0s forwards
+.contents
+  &__header_wrapper
+    overflow: hidden
+    height: 100vh
+    width: 100%
+
+  &__title
+    position: absolute
+    top: 50%
+    left: 50%
+    font-family: cursive
+    transform: translate(-50%, -50%)
+    font-size: 4vw
+    color: var(--blue-color)
+    text-shadow: 2px 2px 3px #ccc
+    font-weight: bold
+
+
+  &__margin_screen
+    position: relative
+    height: 100%
+    width: 100%
+
+  &__content_wrapper
+    position: relative
+    left: 20%
+    width: 60%
+    margin: 10px
+    background-color: var(--white-color)
+    border-radius: 10px
+
+    table
+      width: 100%
+  &__h1
+    position: relative
+    padding: 0.25em 0
+
+    &--blue:after
+      content: ""
+      display: block
+      height: 4px
+      background: linear-gradient(to right, var(--lightblue-color), transparent)
+
+    &--red:after
+      content: ""
+      display: block
+      height: 4px
+      background: linear-gradient(to right, #ff8382, transparent)
+
+  &__content_wrapper img
+    margin: 0px 20px
+    transition: all 0.3s ease
+
+    &:hover
+      margin: 0px 20px
+      transform: scale(1.05)
+
+
+  &__scroll
+    position: absolute
+    bottom: 20px
+    left: 50%
+    z-index: 2
+    display: inline-block
+    -webkit-transform: translate(0, -50%)
+    transform: translate(0, -50%)
+    text-decoration: none
+    padding-top: 60px
+    color: var(--white-color)
+    font-weight: bold
+
+    span
+      position: absolute
+      top: 0
+      left: 50%
+      width: 30px
+      height: 50px
+      margin-left: -15px
+      border: 2px solid #fff
+      border-radius: 50px
+      box-sizing: border-box
+
+      &::before
+        position: absolute
+        top: 10px
+        left: 50%
+        content: ''
+        width: 6px
+        height: 6px
+        margin-left: -3px
+        background-color: #fff
+        border-radius: 100%
+        animation: sdb 2s infinite
+        box-sizing: border-box
+
+@keyframes sdb
+  0%
+    transform: translate(0, 0)
+    opacity: 0
+
+  40%
+    opacity: 1
+
+  80%
+    transform: translate(0, 20px)
+    opacity: 0
+
+  100%
+    opacity: 0
