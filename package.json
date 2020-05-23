@@ -1,0 +1,12 @@
+{
+  "name": "IntroOfMasuda",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rikutons/IntroOfMyCity.git",
+  "author": "Rikuto Sueta <rikutonsicloud@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
