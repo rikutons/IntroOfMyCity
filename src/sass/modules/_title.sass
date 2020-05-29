@@ -1,17 +1,9 @@
-@import ../partials/base
-@import ../partials/colors
-@import ../partials/keyframes
-@import ../partials/mixins
-
-body
+.title
+  overflow: hidden
   position: relative
   width: 100%
   height: 100%
   margin: 0
-  overflow: hidden
-  background-color: rgb(75, 40, 8)
-
-.title
   &__alert
     position: absolute
     display: block
@@ -26,7 +18,7 @@ body
     @include center
     font-size: 60px
     font-family: serif
-    color: var(--black-color)
+    color: $black-color
     text-indent: 30px
     letter-spacing: 30px
     animation: fadein .8s linear 0s forwards
@@ -34,13 +26,6 @@ body
     body[data-state="active"] &
       animation: title__title_key 1s ease 0s forwards, fadeout 0.5s ease 4s forwards
 
-    @keyframes title__title_key
-      from
-        transform: translateY(-50%) translateX(-50%)
-
-      to
-        transform: translateY(-100%) translateX(-50%)
-        font-size: 80px
   &__backcircle
     position: relative
     top: 57%
@@ -49,7 +34,7 @@ body
     height: 150vmax
     transform: translate(-50%, -50%) scale(0)
     border-radius: 50%
-    background-color: var(--white-color)
+    background-color: $white-color
     z-index: -1
 
     body[data-state="active"] &
@@ -62,8 +47,8 @@ body
     text-decoration: none
     font-size: 40px
     padding: 5px 20px
-    color: var(--black-color)
-    border: solid 4px var(--black-color)
+    color: $black-color
+    border: solid 4px $black-color
     border-radius: 4px
     padding-right: 50px
 
@@ -78,7 +63,7 @@ body
     height: 2.5em
     width: 10em
     text-decoration: none
-    color: var(--black-color)
+    color: $black-color
     border: solid 2px #000
     border-radius: 3px
     content: "hi"
@@ -150,49 +135,3 @@ body
     transform: translateY(-50%) translateX(-50%)
     z-index: -2
     animation: fadein .8s linear 0s forwards
-
-
-@keyframes title__btn_spring
-  0%
-    transform: translateY(-50%) translateX(-50%)
-    width: 10em
-
-  50%
-    width: 0em
-
-  100%
-    transform: translateY(-60%) translateX(-50%)
-    width: 15em
-    height: 4em
-
-@keyframes title__btn_text_change
-  0%
-    content: "Exprole"
-
-  50%
-    opacity: 0
-
-  100%
-    transform: translateY(70%) translateX(30%)
-    font-size: 20px
-    content: "Loading..."
-
-@keyframes title__btn_text_change2
-  0%
-    content: "Loading..."
-
-  100%
-    transform: translateY(70%) translateX(120%)
-    content: "Done!"
-
-@keyframes title__btn_progress
-  to
-    clip: rect(0em, 15em, 4em, 0em)
-
-
-@keyframes title__skip_btn_move
-  10%
-    left: calc(100% - 130px)
-
-  80%
-    left: calc(100% - 130px)

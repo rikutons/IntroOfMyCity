@@ -1,0 +1,51 @@
+@keyframes title__title_key
+  from
+    transform: translateY(-50%) translateX(-50%)
+
+  to
+    transform: translateY(-100%) translateX(-50%)
+    font-size: 80px
+@keyframes title__btn_spring
+  0%
+    transform: translateY(-50%) translateX(-50%)
+    width: 10em
+
+  50%
+    width: 0em
+
+  100%
+    transform: translateY(-60%) translateX(-50%)
+    width: 15em
+    height: 4em
+
+@keyframes title__btn_text_change
+  0%
+    content: "Exprole"
+
+  50%
+    opacity: 0
+
+  100%
+    transform: translateY(70%) translateX(30%)
+    font-size: 20px
+    content: "Loading..."
+
+@keyframes title__btn_text_change2
+  0%
+    content: "Loading..."
+
+  100%
+    transform: translateY(70%) translateX(120%)
+    content: "Done!"
+
+@keyframes title__btn_progress
+  to
+    clip: rect(0em, 15em, 4em, 0em)
+
+
+@keyframes title__skip_btn_move
+  10%
+    left: calc(100% - 130px)
+
+  80%
+    left: calc(100% - 130px)

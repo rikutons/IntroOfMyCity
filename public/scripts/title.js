@@ -4,7 +4,7 @@ $(function(){
 		setTimeout(function() { 
 			$("body").attr('data-phase1', 'true')
 			setTimeout(function() { 
-				window.location.href = '../index/index.html';
+				window.location.href = './index.html';
 			}, 5000);
 		}, 5000);
 	});
