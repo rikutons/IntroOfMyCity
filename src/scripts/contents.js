@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(function() {
   $('.contents__scroll').on('click', function(e) {
     e.preventDefault();
