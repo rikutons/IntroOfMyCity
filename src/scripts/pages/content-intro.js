@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import {animateScroll as scroll} from 'react-scroll'
 
 class IntroContent extends Component {
+    constructor(props) {
+        super(props)
+        this.scrollToBottom = this.scrollToBottom.bind()
+    }
+    scrollToBottom() {
+        scroll.scrollToBottom()
+    }
     render() {
         return (
             <div>
@@ -23,7 +31,7 @@ class IntroContent extends Component {
                     <div className="contents__header_wrapper">
                         <img id="contents__header_image" src="../images/town.jpg" />
                         <div className="contents__title">ようこそ、益田市へ。 </div>
-                        <a className="contents__scroll" href="#content"><span></span>Scroll</a>
+                        <a className="contents__scroll" onClick={this.scrollToBottom} href="#content"><span></span>Scroll</a>
                     </div>
                 </header>
                 <div id="content" className="contents__content_wrapper">

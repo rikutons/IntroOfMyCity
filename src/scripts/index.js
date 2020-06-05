@@ -1,6 +1,4 @@
 import '../sass/style.sass';
-import './jquery.easing.1.3';
-import './contents';
 import Title from './pages/title';
 import Index from './pages/index';
 import IntroContent from './pages/content-intro';

@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import {animateScroll as scroll} from 'react-scroll'
 
 class TourismContent extends Component {
+    constructor(props) {
+        super(props)
+        this.scrollToBottom = this.scrollToBottom.bind()
+    }
+    scrollToBottom() {
+        scroll.scrollToBottom()
+    }
     render() {
         return (
             <div>
@@ -21,39 +29,38 @@ class TourismContent extends Component {
                 </div>
                 <header>
                     <div className="contents__header_wrapper">
-                        <img id="contents__header_image" src="../images/town.jpg" />
-                        <div className="contents__title">ようこそ、益田市へ。 </div>
-                        <a className="contents__scroll" href="#content"><span></span>Scroll</a>
+                        <img id="contents__header_image" src="../images/grandtoit.jpg" />
+                        <div className="contents__title">芸術と自然に会いに行く。 </div>
+                        <a className="contents__scroll" onClick={this.scrollToBottom} href="#content"><span></span>Scroll</a>
                     </div>
                 </header>
                 <div id="content" className="contents__content_wrapper">
-                    <h1 className="contents__h1--blue">益田市って？</h1>
+                    <h1 className="contents__h1--red">島根県芸術文化センター グラントワ</h1>
                     <table>
                         <tbody>
                             <tr valign="top">
                                 <td>
-                                    <img src="../images/content/location.png" align="right" />
-                                    <p>益田市は、島根県西部の日本海に面した位置にある市(右の写真の赤い箇所)です。人口は<b>45,000人</b>ほどで、島根県内最大の市面積を持ちます。</p>
-                                    <p>島根県芸術文化センター グラントワや益田市立雪舟の郷記念館などの芸術的側面と、<br />清流日本一になった高津川や持石海岸などの大自然的側面があり、それらの調和がとれた情趣に富んだ街です。</p>
-                                    <p>あと、あの有名なスーパーキヌヤの本店があります。二階建てです。すごい。</p>
+                                    <img src="../images/content/grandtoit-schedule.png" align="right" width="550" />
+                                    <b>「美術館×劇場という芸術基地」</b> なるフレーズを掲げる施設です。<br />
+						「美術館」の側面では、さまざまなテーマに沿った展覧会が同時に3, 4個開かれ、1つの入場券でそのすべてを見ることができます。<br />
+						有名なもので、今年の1月28日まで「追悼水木しげる　ゲゲゲの人生展」など、非常に幅広い作品の展示が行われています。<br /><br />
+						「劇場」の側面では、1か月に1,2回、著名なアーティストによるライブが行われます。<br />
+						また、近隣の学校の文化祭や発表会の舞台としても用いられます。<br />
+                                    <a href="http://www.grandtoit.jp/">公式サイト</a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <h1 className="contents__h1--blue">主要産業</h1>
+                    <h1 className="contents__h1--red">持石海岸</h1>
                     <table>
                         <tbody>
                             <tr valign="top">
                                 <td>
-                                    <b>・天然アユ</b><br />
-                                                &emsp;益田市の中心を通る高津川では、6月から9月の間、漁業許可証を持つ者に限りアユ釣りが許可されます。<br />
-                                                    高津川で釣れた天然のアユは、1kg10,000円を超える高値で売買されるそうです。<br /><br />
-                                    <img src="../images/content/amusmeron.jpg" width="350" align="right" />
-                                    <b>・アムスメロン</b><br />
-                                &emsp;西いわみ地区本部を代表する特産物のアムスメロンは、昭和51年に益田市飯田町で本格的な栽培が始まりました。<br />
-                                栽培方法は全て立体栽培で、仕立ては2本仕立て1つる1果どりとしており、専用の配合肥料を使って育てます。<br />
-                                アムスメロンと並び、贈答用として人気が高いアールスメロンも栽培されています。
-                            </td>
+                                    <img src="../images/content/motiishi.jpg" align="left" width="550" />
+						国道191号線沿いにある、三里ヶ浜の一部の遊泳場<b>「持石遊泳場」</b>。<br /><br />
+						道路を走っている時にも、思わず目を向けてしまいたくなるほどに水平線がきれいで、一直線の海岸が延々と続いています。 シャワー施設も整っているため、サーフィンやボディボードなどマリンスポーツを楽しむ人で賑わいます。<br /><br />
+						また、石のモニュメントや東屋などもあるので海を眺めるだけでも楽しめる場所です。特に夕暮れ時は、延々と続く海岸線に沈む夕日が格別の時間を味あわせてくれます。
+					</td>
                             </tr>
                         </tbody>
                     </table>
