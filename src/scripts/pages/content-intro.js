@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {animateScroll as scroll} from 'react-scroll'
+import Header from '../components/header'
 
 class IntroContent extends Component {
     constructor(props) {
@@ -13,20 +14,7 @@ class IntroContent extends Component {
     render() {
         return (
             <div>
-                <div className="content_btn_wrapper">
-                    <Link className="content_btn" to="/content-intro">
-                        はじめての益田
-                    </Link>
-                    <Link className="content_btn" to="/content-tourism">
-                        観光
-                    </Link>
-                    <a className="content_btn" href="https://www.city.masuda.lg.jp/">
-                        益田市HP(外部ページ)
-                    </a>
-                    <Link className="content_btn" to="/">
-                        トップへ
-                    </Link>
-                </div>
+                <Header/>
                 <header>
                     <div className="contents__header_wrapper">
                         <img id="contents__header_image" src="../images/town.jpg" />
