@@ -15,7 +15,10 @@
       animation: title__skip_btn_move 3s ease 1s forwards
 
   .title[data-isactive=true] &__progless_bar 
-    animation: title__progress 3s ease 1s forwards, widthto100 0.5s ease 4s forwards, title__progress_heightto150 0.5s ease 4.5s forwards, delete_clip 0s ease 4s forwards, fadeout 0s ease 6.5s forwards
+    animation: title__progress 3s ease 1s forwards,
+    widthto100 0.5s ease 4s forwards,
+    title__progress_heightto150 0.5s ease 4.5s forwards,
+    delete_clip 0s ease 4s forwards, fadeout 0s ease 6.5s forwards
 
   &__btn
     animation: scale0-1_50p .8s ease 0s forwards
@@ -48,12 +51,15 @@
 
   100%
     transform: translate(calc(-50% + 80px), calc(-56% + 50px))
+    // transform: translate(70%, 30%)
     font-size: 20px
     content: "Loading..."
 
 @keyframes title__btn_text_change2
   100%
     transform: translate(calc(-50% + 90px), calc(-56% + 50px))
+    // transform: translate(100%, 30%)
+    font-size: 20px
     content: "Done!"
 
 @keyframes title__progress
