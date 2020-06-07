@@ -1,6 +1,6 @@
 import '../sass/style.sass';
 import Title from './pages/title';
-import Index from './pages/index';
+import Menu from './pages/menu';
 import IntroContent from './pages/content-intro';
 import TourismContent from './pages/content-tourism';
 import React from "react";
@@ -13,7 +13,7 @@ class App extends React.Component{
             <Router>
                 <Switch>
                     <Route path="/" exact component={Title} />
-                    <Route path="/index" component={Index} />
+                    <Route path="/index" component={Menu} />
                     <Route path="/content-intro" component={IntroContent}/>
                     <Route path="/content-tourism" component={TourismContent}/>
                 </Switch>

@@ -2,7 +2,7 @@ body
   background-color: $white-color
   color: $black-color
 
-#contents
+.contents
   &__header_image
     position: absolute
     width: 100%
@@ -11,19 +11,21 @@ body
     z-index: -1
     animation: fadein 1s linear 0s forwards
 
-.contents
   &__header_wrapper
     overflow: hidden
     height: 100vh
     width: 100%
 
   &__title
+    white-space: nowrap
     position: absolute
-    top: 50%
-    left: 50%
-    font-family: cursive
-    transform: translate(-50%, -50%)
-    font-size: 4vw
+    @include center
+    @include sp-layout
+      font-size: 34px
+    @include md-layout
+      font-size: 44px
+    @include pc-layout
+      font-size: 50px
     color: $blue-color
     text-shadow: 2px 2px 3px #ccc
     font-weight: bold
@@ -34,16 +36,38 @@ body
     height: 100%
     width: 100%
 
-  &__content_wrapper
+  &__margin_screend
     position: relative
-    left: 20%
-    width: 60%
-    margin: 10px
+    height: 100%
+    width: 100%
+
+  &__img
+    margin: 20px
+    width: 50%
+    @include sp-layout
+      width: 90%
+      margin: 20px 5%
+    transition: all 0.3s ease
+
+    &:hover
+      transform: scale(1.05)
+    
+    &--left
+      float: left
+
+    &--right
+      float: right
+
+  &__wrapper
+    position: relative
     background-color: $white-color
-    border-radius: 10px
+    @include set-responsive
+    padding: 0 10px
+    margin: 0 auto
 
     table
       width: 100%
+
   &__h1
     position: relative
     padding: 0.25em 0
@@ -60,23 +84,12 @@ body
       height: 4px
       background: linear-gradient(to right, #ff8382, transparent)
 
-  &__content_wrapper img
-    margin: 0px 20px
-    transition: all 0.3s ease
-
-    &:hover
-      margin: 0px 20px
-      transform: scale(1.05)
-
-
   &__scroll
     position: absolute
     bottom: 20px
-    left: 50%
     z-index: 2
     display: inline-block
-    -webkit-transform: translate(0, -50%)
-    transform: translate(0, -50%)
+    @include center(true, false)
     text-decoration: none
     padding-top: 60px
     color: $white-color

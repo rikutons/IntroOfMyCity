@@ -28,7 +28,7 @@ class Title extends Component {
 
     render() {
         return(
-            <div className="title" data-isactive={this.state.isActive} data-phase1={this.state.phase1}>
+            <div className="title" data-isactive={this.state.isActive}>
                 <div className="title__background"/>
                 <div className="title__sub">
                     <span className="art_color">
@@ -46,20 +46,27 @@ class Title extends Component {
                     MASUDA
                 </div>
                 <a className="title__btn" onClick={this.activate}/>
+                <div className="title__progless_bar" />
                 <div className="title__backcircle"/>
                 <Link to="Index" className="title__skip_btn">
                     SKIP
                 </Link>
 
-                <div className="phase1__text1"/>
-                <div className="phase1__backcircle"/>
-                <img className="phase1__map" src="../images/chugoku-tiho.png" alt="a" />
-                <div className="phase1__text2">益田市</div>
-                <div>
-                    <div className="phase1__change1"/>
-                    <div className="phase1__change2"/>
-                    <div className="phase1__change3"/>
-                </div>
+                {this.state.phase1 &&
+                    <div>
+                        <div className="phase1__cutin">
+                            <div className="phase1__cutin_text" >きらめく自然、こころ癒されるまち。</div>
+                        </div>
+                        <div className="phase1__backcircle" />
+                        <img className="phase1__map" src="../images/chugoku-tiho.png" alt="a" />
+                        <div className="phase1__text2">益田市</div>
+                        <div>
+                            <div className="phase1__change1" />
+                            <div className="phase1__change2" />
+                            <div className="phase1__change3" />
+                        </div>
+                    </div>
+                }
             </div>
         )
     }

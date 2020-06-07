@@ -24,12 +24,20 @@
   &__titlebox
     position: absolute
     top: 50%
-    left: 70%
+    left: 60%
     display: flex
-    transform: translate(-50%, -50%)
+    align-items: center
+    justify-content: center
+    transform: translateY(-50%)
     background-color: rgba(240, 240, 240, 0.7)
-    padding: 3px 10px 0px 10px
+    padding: 3px
     border-radius: 10px
+    @include sp-layout
+      font-size: 30px
+    @include md-layout
+      font-size: 46px
+    @include pc-layout
+      font-size: 60px
 
   &__title
     &:before
@@ -37,16 +45,17 @@
       display: inline-block
       background-image: url("../images/symbol.gif")
       background-size: contain
-      width: 4vw
-      height: 4vw
+      width: 1em
+      height: 1em
       transform: translateY(0.6vw)
 
     font-weight: bold
     color: $blue-color
-    font-size: 4vw
-    margin: -15px 3px
+    font-size: 1em
+    margin: 3px
 
   &__sub
     font-weight: bold
-    font-size: 2vw
-    line-height: 2.2vw
+    font-size: 0.5em
+    line-height: 1em
+    vertical-align: middle
