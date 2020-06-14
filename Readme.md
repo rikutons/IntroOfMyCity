@@ -2,10 +2,10 @@
 1.どんなサイト？
 ---
 課題で作成した、島根県益田市を紹介する非公式サイトです。
-CSSやJQueryを用いて、オープニングアニメーションやボタンの挙動を制御しています。
+CSS(SASS記法のSass)やJavaScript(React)を用いて、オープニングアニメーションやボタンの挙動を制御しています。
 
 2.閲覧方法
 ---
-title/title.html から閲覧してください。
-この時、google chorme、mozilla firefox以外のブラウザで閲覧するとレイアウトが崩れてしまいます。
+public/index.html から閲覧してください。
+この時、Google Chorme、Mozilla Firefox、Chromium Edge 以外のブラウザで閲覧するとレイアウトが崩れてしまいます。
 申し訳ございません。
