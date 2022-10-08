@@ -2,6 +2,7 @@
   "name": "IntroOfMasuda",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://rikutons.github.io/IntroOfMyCity/",
   "repository": "git@github.com:rikutons/IntroOfMyCity.git",
   "author": "Rikuto Sueta <rikutonsicloud@gmail.com>",
   "license": "MIT",
@@ -32,6 +33,6 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.config.js"
   }
 }

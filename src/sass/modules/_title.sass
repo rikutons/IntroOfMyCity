@@ -5,15 +5,25 @@
   height: 100%
   margin: 0
 
-  &__alert
+  &__github_icon
     position: absolute
-    display: block
-    color: $white-color 
-    font-size: 20px
-    top: calc(100% - 40px)
-    left: calc(100% - 560px)
+    top: 100%
+    left: 100%
+    width: 100px
+    transform: translate(-120px, -120px)
     z-index: -2
-    font-weight: bold
+    &_back
+      position: absolute
+      top: 100%
+      left: 100%
+      width: 100px
+      height: 100px
+      border-radius: 50%
+      opacity: 0.33
+      filter: blur(8px)
+      background: $white-color
+      transform: translate(-120px, -120px)
+      z-index: -2
   &__title
     @include center
     font-size: 60px
@@ -97,7 +107,7 @@
 
   &__background_img
     content: ''
-    background: url('../images/grandtoit.jpg')
+    background: url('./images/grandtoit.jpg')
 
     /*背景画像のURL
     // background-color: #856139

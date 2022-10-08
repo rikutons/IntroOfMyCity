@@ -41,15 +41,16 @@ class Title extends Component {
                     </span>
                 </div>
                 <a className="title__btn" onClick={this.activate}/>
-                {/* <div className="title__alert">
-                    ChromeかFirefoxでないと正常に動作しませんm(_ _)m
-                </div> */}
+                <div className="title__github_icon_back"/>
+                <a href="https://github.com/rikutons/IntroOfMyCity">
+                    <img className="title__github_icon" src="./images/GitHub-Mark-Small.svg"/>
+                </a>
                 <div className="title__title">
                     MASUDA
                 </div>
                 <div className="title__progless_bar" />
                 <div className="title__backcircle"/>
-                <Link to="Index" className="title__skip_btn">
+                <Link to="index" className="title__skip_btn">
                     SKIP
                 </Link>
 
@@ -58,7 +59,7 @@ class Title extends Component {
                         <div className="phase1__cutin"> </div>
                         <div className="phase1__cutin_text" >きらめく自然、こころ癒されるまち。</div>
                         <div className="phase1__backcircle" />
-                        <img className="phase1__map" src="../images/chugoku-tiho.png" alt="a" />
+                        <img className="phase1__map" src="./images/chugoku-tiho.png" alt="a" />
                         <div className="phase1__text2">益田市</div>
                         <div>
                             <div className="phase1__change1" />

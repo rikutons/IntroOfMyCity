@@ -17,7 +17,7 @@ class IntroContent extends Component {
                 <Header/>
                 <header>
                     <div className="contents__header_wrapper">
-                        <img className="contents__header_image" src="../images/town.jpg" />
+                        <img className="contents__header_image" src="./images/town.jpg" />
                         <div className="contents__title">ようこそ、益田市へ。 </div>
                         <a className="contents__scroll" onClick={this.scrollToBottom} href="#content"><span></span>Scroll</a>
                     </div>
@@ -28,7 +28,7 @@ class IntroContent extends Component {
                         <tbody>
                         <tr valign="top">
                             <td>
-                                <img src="../images/content/location.png" className="contents__img contents__img--left" />
+                                <img src="./images/content/location.png" className="contents__img contents__img--left" />
                                 <p>益田市は、島根県西部の日本海に面した位置にある市(右の写真の赤い箇所)です。人口は<b>45,000人</b>ほどで、島根県内最大の市面積を持ちます。</p>
                                 <p>島根県芸術文化センター グラントワや益田市立雪舟の郷記念館などの芸術的側面と、<br/>清流日本一になった高津川や持石海岸などの大自然的側面があり、それらの調和がとれた情趣に富んだ街です。</p>
                                 <p>あと、あの有名なスーパーキヌヤの本店があります。二階建てです。すごい。</p>
@@ -41,7 +41,7 @@ class IntroContent extends Component {
                         <tbody>
                         <tr valign="top">
                             <td>
-                                <img src="../images/content/amusmeron.jpg" className="contents__img contents__img--right" />
+                                <img src="./images/content/amusmeron.jpg" className="contents__img contents__img--right" />
                                 <b>・天然アユ</b><br/>
                                                 &emsp;益田市の中心を通る高津川では、6月から9月の間、漁業許可証を持つ者に限りアユ釣りが許可されます。<br/>
                                                     高津川で釣れた天然のアユは、1kg10,000円を超える高値で売買されるそうです。<br/><br/>

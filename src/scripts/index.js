@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 class App extends React.Component{
     render() {
         return (
-            <Router>
+            <Router  basename="/IntroOfMyCity/">
                 <Switch>
                     <Route path="/" exact component={Title} />
                     <Route path="/index" component={Menu} />
@@ -18,7 +18,6 @@ class App extends React.Component{
                     <Route path="/content-tourism" component={TourismContent}/>
                 </Switch>
             </Router>
-            // <Title/>
         )
     }
 }
