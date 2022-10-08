@@ -2,6 +2,8 @@
   .phase1
     &__cutin
       animation: phase1__text1_back_a 1.4s cubic-bezier(0.15, 0.95, 0.23, 0.89) 0s none
+      &_text
+        animation: phase1__text1_a 1.4s cubic-bezier(0.15, 0.95, 0.23, 0.89) 0.0s none
 
     &__map
       animation: appear 0s ease 1.5s forwards, phase1__map_a 1s ease 1.5s forwards
@@ -28,10 +30,20 @@
   100%
     height: 0%
 
+@keyframes phase1__text1_a
+  0%
+    clip-path: inset(50% 0px)
+  10%
+    clip-path: inset(0% 0px)
+  67%
+    clip-path: inset(0% 0px)
+  100%
+    clip-path: inset(50% 0px)
+
 @keyframes phase1__map_a
   0%
-    width: 500%
-    transform: translate(-70%, -50%) rotate(30deg)
+    width: 1200%
+    transform: translate(-65%, -50%) rotate(35deg)
 
   50%
     width: 80%

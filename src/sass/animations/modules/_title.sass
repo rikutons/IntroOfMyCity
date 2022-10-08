@@ -15,10 +15,7 @@
       animation: title__skip_btn_move 3s ease 1s forwards
 
   .title[data-isactive=true] &__progless_bar 
-    animation: title__progress 3s ease 1s forwards,
-    widthto100 0.5s ease 4s forwards,
-    title__progress_heightto150 0.5s ease 4.5s forwards,
-    delete_clip 0s ease 4s forwards, fadeout 0s ease 6.5s forwards
+    animation: title__progress 3s ease 1s forwards, widthto100 0.5s ease 4s forwards, title__progress_heightto150 0.5s ease 4.5s forwards, delete_clip 0s ease 4s forwards, fadeout 0s ease 6.6s forwards
 
   &__btn
     animation: scale0-1_50p .8s ease 0s forwards
@@ -72,6 +69,6 @@
 
 @keyframes title__skip_btn_move
   10%
-    transform: translateX(-130px)
+    transform: translateX(-80%)
   80%
-    transform: translateX(-130px)
+    transform: translateX(-80%)

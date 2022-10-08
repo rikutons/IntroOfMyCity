@@ -13,6 +13,7 @@
         font-weight: bold
         font-family: "HG正楷書体-PRO",fantasy
         font-size: 2.8vw
+        clip-path: inset(100% 0px)
 
     &__map
       @include center(true, false)
@@ -55,7 +56,7 @@
         left: -3.99vw
         top: 30%
         border: 2vw solid transparent
-        border-right: 2vw solid #660088
+        border-right: 2vw solid $blue-color
 
     $change_colors : (#c3ce5f, #c45c66, #283c5f)
     @for $i from 1 through 3

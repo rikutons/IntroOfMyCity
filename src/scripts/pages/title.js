@@ -30,22 +30,23 @@ class Title extends Component {
         return(
             <div className="title" data-isactive={this.state.isActive}>
                 <div className="title__background"/>
+                <div className="title__background_img"/>
                 <div className="title__sub">
-                    <span className="art_color">
+                    <span className="art_color_dark">
                         Art
                     </span>
-                    and
-                    <span className="nature_color">
+                    &nbsp;and&nbsp;
+                    <span className="nature_color_dark">
                             Nature
                     </span>
                 </div>
-                <div className="title__alert">
+                <a className="title__btn" onClick={this.activate}/>
+                {/* <div className="title__alert">
                     ChromeかFirefoxでないと正常に動作しませんm(_ _)m
-                </div>
+                </div> */}
                 <div className="title__title">
                     MASUDA
                 </div>
-                <a className="title__btn" onClick={this.activate}/>
                 <div className="title__progless_bar" />
                 <div className="title__backcircle"/>
                 <Link to="Index" className="title__skip_btn">
@@ -54,9 +55,8 @@ class Title extends Component {
 
                 {this.state.phase1 &&
                     <div>
-                        <div className="phase1__cutin">
-                            <div className="phase1__cutin_text" >きらめく自然、こころ癒されるまち。</div>
-                        </div>
+                        <div className="phase1__cutin"> </div>
+                        <div className="phase1__cutin_text" >きらめく自然、こころ癒されるまち。</div>
                         <div className="phase1__backcircle" />
                         <img className="phase1__map" src="../images/chugoku-tiho.png" alt="a" />
                         <div className="phase1__text2">益田市</div>
